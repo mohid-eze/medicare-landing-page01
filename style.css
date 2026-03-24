@@ -199,7 +199,7 @@ a{
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-
+/* Doctors Showcase */
 #doctors-search, #doctor-search {
   padding: 10px;
   width: 250px;
@@ -207,12 +207,21 @@ a{
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-/* Doctors Showcase */
 .doctors {
   padding: 60px 20px;
   background: linear-gradient(to right, #f8f9fa, #e0f7fa);
   text-align: center;
+}
+.doctor-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;      /* text bhi center */
+  transition: transform 0.3s ease;
+}
+.doctor-card:hover {
+  transform: translateY(-10px);
 }
 
 .doctors h2 {
@@ -264,6 +273,9 @@ a{
   text-align: center;      /* text bhi center */
   transition: transform 0.3s ease;
 }
+.doctor-card:hover {
+  transform: translateY(-10px);
+}
 
 .doctor-card img {
   width: 180px;
@@ -276,9 +288,7 @@ a{
   margin-right: auto;      /* image bhi center */
 }
 
-.doctor-card:hover {
-  transform: translateY(-10px);
-}
+
 
 .doctor-card h3 {
   font-size: 18px;

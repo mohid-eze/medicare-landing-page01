@@ -89,3 +89,18 @@ featureCards.forEach((card, index) => {
   });
 });
 
+const searchInput = document.getElementById('doctor-search');
+const doctorCards = document.querySelectorAll('.doctor-card');
+
+searchInput.addEventListener('keyup', function() {
+  const value = this.value.toLowerCase();
+  doctorCards.forEach(card => {
+    const name = card.querySelector('h3').textContent.toLowerCase();
+    const specialty = card.querySelector('p').textContent.toLowerCase();
+    if (name.includes(value) || specialty.includes(value)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
