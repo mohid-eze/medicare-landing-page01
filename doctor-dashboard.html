@@ -4,8 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor-dashboard</title>
-    <link rel="stylesheet" href="nav-footer.css">
+    <!-- <link rel="stylesheet" href="nav-footer.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{margin:0; padding:0; box-sizing:border-box;}
+        body { font-family:'Segoe UI', sans-serif; background:#f8f9fa; }
+
+        /* Navbar */
+        nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+        display:flex; 
+        justify-content:space-between; 
+        align-items:center;
+        background:#fff; 
+        padding:15px 40px;
+        position:fixed; 
+        top:0; 
+        left: 0;
+        z-index:1000;
+        box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+        .nav-logo { display:flex; align-items:center; gap:10px; color:#0077b6; font-size:22px; font-weight:bold; }
+        .nav-links { list-style:none; display:flex; gap:30px; }
+        .nav-links li a {
+        color:#03045e; text-decoration:none; font-size:16px; font-weight:500;
+        padding:8px 12px; border-radius:6px; transition:0.3s;
+        }
+        .nav-links li a:hover { background:#0077b6; color:#fff; }
+
+        /* Sidebar */
+        .sidebar {
+        width:240px; 
+        background:linear-gradient(135deg,#03045e,#0077b6); 
+        color:#fff;
+        height:100vh; 
+        position:fixed; 
+        top:60px; 
+        left:0; 
+        padding:20px;
+        }
+        .sidebar h3 { margin-bottom:20px; font-size:20px; }
+        .sidebar ul { list-style:none; padding:0; }
+        .sidebar ul li { margin:15px 0; }
+        .sidebar ul li a { color:#fff; text-decoration:none; font-weight:500; }
+        .sidebar ul li a:hover { color:#90e0ef; }
+
+        /* Content */
+        .content { margin-left:260px; padding:20px; height: 100vh; padding-top: 6rem; }
+        .cards { display:flex; flex-wrap:wrap; gap:20px; }
+        .card {
+        flex:1; min-width:200px; padding:20px; border-radius:8px;
+        color:#fff; display:flex; align-items:center; gap:10px;
+        box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+        .card i { font-size:22px; }
+        .blue { background:#0077b6; }
+        .green { background:#2a9d8f; }
+        .orange { background:#e76f51; }
+
+        /* Table */
+        table { width:100%; border-collapse:collapse; margin-top:20px; }
+        table th, table td { border:1px solid #ddd; padding:10px; text-align:center; }
+        table th { background:#0077b6; color:#fff; }
+        .status { padding:5px 10px; border-radius:6px; font-weight:bold; }
+        .completed { background:#2a9d8f; color:#fff; }
+        .pending { background:#e9c46a; color:#000; }
+        .cancelled { background:#e63946; color:#fff; }
+  </style>
 </head>
 <body>
     <header id="home">
@@ -30,71 +104,71 @@
             </ul>
         </nav>
     </header>
-    <section class="main-section">
-        <h1>Mohid</h1>
+    <!-- Sidebar -->
+        <div class="sidebar">
+            <h3><i class="fa-solid fa-user-doctor"></i> Doctor Menu</h3>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">My Patients</a></li>
+                <li><a href="#">Appointment List</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="cards">
+                <div class="card blue"><i class="fa-solid fa-calendar-check"></i> My Appointments (5)</div>
+                <div class="card green"><i class="fa-solid fa-users"></i> Total Patients (48)</div>
+                <div class="card orange"><i class="fa-solid fa-clock"></i> My Schedule (Mon–Fri 09:00–18:00)</div>
+            </div>
+
+            <h2>Appointment History</h2>
+            <table>
+                <tr><th>Patient</th><th>Date</th><th>Time</th><th>Status</th></tr>
+                <tr><td>Ali Raza</td><td>15 Aug 2023</td><td>11:00 AM</td><td><span class="status completed">Completed</span></td></tr>
+                <tr><td>Sara Khan</td><td>20 Aug 2023</td><td>02:00 PM</td><td><span class="status pending">Pending</span></td></tr>
+                <tr><td>Ahmed Ali</td><td>23 Aug 2023</td><td>09:30 AM</td><td><span class="status cancelled">Cancelled</span></td></tr>
+            </table>
+        </div>
     </section>
-        <!-- Footer -->
-    <footer id="footer">
-        <div class="footer-container">
-            
-            <!-- Brand -->
-            <div class="footer-brand">
-                <h2>MEDICARE</h2>
-                <p>Your trusted healthcare partner.</p>
-            </div>
+    <script>
+        // ✅ Login Logic
+        function login(role){
+        if(role === "admin"){
+            window.location.href = "admin-dashboard.html";
+        } else if(role === "doctor"){
+            window.location.href = "doctor-dashboard.html";
+        } else if(role === "patient"){
+            window.location.href = "patient-dashboard.html";
+        }
+        }
 
-            <!-- Company -->
-            <div class="footer-section" id="about">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-            </div>
+        // ✅ Logout Logic
+        function logout(){
+        window.location.href = "index.html"; // back to landing page
+        }
 
-            <!-- Services -->
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="">Find Doctors</a></li>
-                    <li><a href="#">Hospitals</a></li>
-                    <li><a href="#">Lab Tests</a></li>
-                    <li><a href="#">Surgeries</a></li>
-                    <li><a href="#">Online Consultation</a></li>
-                </ul>
-            </div>
+        // ✅ Sidebar Navigation Actions
+        document.addEventListener("DOMContentLoaded", () => {
+        const appointmentList = document.querySelector("#appointmentList");
+        const schedule = document.querySelector("#schedule");
 
-            <!-- Newsletter -->
-            <div class="footer-newsletter">
-                <h4>Newsletter</h4>
-                <p>Subscribe to get health tips & offers.</p>
-                <form id="newsletter-form">
-                    <input type="email" id="newsletter-email" placeholder="Enter your email">
-                    <button type="submit">Sbs..</button>
-                    <p id="newsletter-message"></p>
-                </form>
-            </div>
+        if(appointmentList){
+            appointmentList.addEventListener("click", () => {
+            alert("Opening Appointment List Section...");
+            // tum yahan scroll ya section toggle kar sakte ho
+            });
+        }
 
-            <!-- Social -->
-            <div class="footer-section" id="contact">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom -->
-        <div class="footer-bottom">
-            <p>© 2026 MEDICARE. All rights reserved.</p>
-        </div>
-    </footer>
+        if(schedule){
+            schedule.addEventListener("click", () => {
+            alert("Opening Schedule Section...");
+            // tum yahan apna schedule section show kar sakte ho
+            });
+        }
+        });
+    </script>
 </body>
 </html>
