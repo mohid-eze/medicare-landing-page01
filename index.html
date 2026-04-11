@@ -20,10 +20,12 @@
             </div>
             <!-- Navigation Links -->
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#doctors">Doctors</a></li>
-                <li><a href="#footer">About</a></li>
-                <li><a href="#footer">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="doctor-login.html">Doctor</a></li>
+                <li><a href="patient-login.html">Patient</a></li>
+                <li><a href="admin-login.html">Admin</a></li> -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html">Register</a></li>
             </ul>
@@ -49,9 +51,11 @@
             <p>Our team consists of experienced and certified medical professionals.</p>
         </div>
         <div class="feature">
-            <img src="img/images.png" alt="">
-            <h3>Easy Booking</h3>
-            <p>Book appointments online in just a few clicks.</p>
+            <a href="booking.html">
+                <img src="img/images.png" alt="">
+                <h3>Easy Booking</h3>
+                <p>Book appointments online in just a few clicks.</p>
+            </a>
         </div>
         <div class="feature">
             <img src="img/images (1).png" alt="">
@@ -60,148 +64,144 @@
         </div>
     </section>
     <!-- Doctors Showcase -->
-<section class="doctors">
-  <h2>Our Doctors</h2>
-  <!-- Search Bar -->
-  <input type="text" id="doctor-search" placeholder="Search by specialty...">
-  <div class="doctor-cards" id="doctors">
-        <!-- Doctor 1 -->
-        <div class="doctor-card">
-            <img src="img/doctor 02.jpg" alt="Dr. Ahmed Khan">
-            <h3>Dr. Ahmed Khan</h3>
-            <p>Cardiologist</p>
-            <!-- <button class="view-prifile">View Profile</button> -->
+    <section class="doctors">
+        <h2>Our Doctors</h2>
+
+        <!-- Search Bar -->
+        <input type="text" id="doctor-search" placeholder="Search by specialty...">
+
+        <!-- Doctors Grid -->
+        <div class="doctor-cards" id="doctors">
+
+            <!-- Doctor 1 -->
+            <a href="doctor1.html" class="doctor-card">
+                <img src="img/doctor 01.jpg" alt="Dr. Shahida Husain Tarar">
+                <h3>Dr. Shahida Husain Tarar</h3>
+                <p>Gynecologist, Obstetrician</p>
+            </a>
+
+            <!-- Doctor 2 -->
+            <a href="doctor2.html" class="doctor-card">
+                <img src="img/doctor 02.jpg" alt="Dr. Mohammad Akram">
+                <h3>Dr. Mohammad Akram</h3>
+                <p>Cardiologist</p>
+            </a>
+
+            <!-- Doctor 3 -->
+            <a href="doctor3.html" class="doctor-card">
+                <img src="img/doctor 03.jpg" alt="Dr. Shagufta Shafi">
+                <h3>Dr. Shagufta Shafi</h3>
+                <p>Dermatologist</p>
+            </a>
+
+            <!-- Doctor 4 -->
+            <a href="doctor4.html" class="doctor-card">
+                <img src="img/doctor 04.jpg" alt="Dr. Ghazi Khan Khosa">
+                <h3>Dr. Ghazi Khan Khosa</h3>
+                <p>Pediatrician</p>
+            </a>
+
+            <!-- Doctor 5 -->
+            <a href="doctor5.html" class="doctor-card">
+                <img src="img/doctor 5.png" alt="Dr. Adnan Mehmood">
+                <h3>Dr. Adnan Mehmood</h3>
+                <p>Neurologist</p>
+            </a>
+
+            <!-- Doctor 6 -->
+            <a href="doctor6.html" class="doctor-card">
+                <img src="img/doctor 06.jpg" alt="Dr. Adiba Akhtar Khalil">
+                <h3>Dr. Adiba Akhtar Khalil</h3>
+                <p>Gynecologist</p>
+            </a>
+
+            <!-- Doctor 7 -->
+            <a href="doctor7.html" class="doctor-card">
+                <img src="img/doctor 07.jpg" alt="Dr. Dr. Shahida Sultan">
+                <h3>Dr. Dr. Shahida Sultan</h3>
+                <p>Orthopedic</p>
+            </a>
+
+            <!-- Doctor 8 -->
+            <a href="doctor8.html" class="doctor-card">
+                <img src="img/doctor 08.jpg" alt="Prof. Dr. Shujaat Ali khan">
+                <h3>Prof. Dr. Shujaat Ali khan</h3>
+                <p>Psychiatrist</p>
+            </a>
+
+            <!-- Doctor 9 -->
+            <a href="doctor9.html" class="doctor-card">
+                <img src="img/doctor 09.jpg" alt="Assist. Prof. Dr. Rahimullah Khattak">
+                <h3>A.P.Dr Rahimullah Khattak</h3>
+                <p>Oncologist</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            
+            <!-- Brand -->
+            <div class="footer-brand">
+                <h2>MEDICARE</h2>
+                <p>Your trusted healthcare partner.</p>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-section" id="about">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#doctors">Find Doctors</a></li>
+                    <li><a href="#">Hospitals</a></li>
+                    <li><a href="#">Lab Tests</a></li>
+                    <li><a href="#">Surgeries</a></li>
+                    <li><a href="#">Online Consultation</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get health tips & offers.</p>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email">
+                    <button type="submit">Sbs..</button>
+                    <p id="newsletter-message"></p>
+                </form>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-section" id="contact">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
         </div>
 
-        <!-- Doctor 2 -->
-        <div class="doctor-card">
-            <img src="img/doctor 01.jpg" alt="Dr. Sarah Ali">
-            <h3>Dr. Sarah Ali</h3>
-            <p>Dermatologist</p>
-            <!-- <button class="view-prifile">View Profile</button> -->
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>© 2026 MEDICARE. All rights reserved.</p>
         </div>
-
-        <!-- Doctor 3 -->
-        <div class="doctor-card">
-            <img src="img/doctor 03.jpg" alt="Dr. Kamla Singh">
-            <h3>Dr. Kamla Singh</h3>
-            <p>Pediatrician</p>
-            <!-- <button class="view-prifile">View Profile</button> -->
-        </div>
-
-        <!-- Doctor 4 -->
-        <div class="doctor-card">
-            <img src="img/doctor 04.jpg" alt="Dr. Bilal Hussain">
-            <h3>Dr. Bilal Hussain</h3>
-            <p>Neurologist</p>
-            <!-- <button class="view-prifile">View Profile</button> -->
-        </div>
-
-        <!-- Doctor 5 -->
-        <div class="doctor-card" class="card">
-            <img src="img/doctor 05.avif" alt="Dr. Ayesha Malik">
-            <h3>Dr. Ayesha Malik</h3>
-            <p>Gynecologist</p>
-            <!-- <button class="view-prifile">View Profile</button> -->
-        </div>
-
-        <!-- Doctor 6 -->
-        <div class="doctor-card">
-            <img src="img/doctor 06.jpg" alt="Dr. Imran Shah">
-            <h3>Dr. Imran Shah</h3>
-            <p>Orthopedic</p>
-            <!-- <button class="view-prifile">View Profile</button> -->
-        </div>
-
-        <!-- Doctor 7 -->
-        <div class="doctor-card">
-            <img src="img/doctor 07.jpg" alt="Dr. Nadia Khan">
-            <h3>Dr. Nadia Khan</h3>
-            <p>Psychiatrist</p>
-            <!-- <button class="view-prifile ">View Profile</button> -->
-        </div>
-
-        <!-- Doctor 8 -->
-        <div class="doctor-card">
-            <img src="img/doctor 08.jpg" alt="Dr. Usman Ali">
-            <h3>Dr. Usman Ali</h3>
-            <p>Oncologist</p>
-            <!-- <button class="view-prifile">View Profile</button> -->
-        </div>
-
-        <!-- Doctor 9 -->
-        <div class="doctor-card">
-            <img src="img/doctor 09.jpg" alt="Dr. Farah Javed">
-            <h3>Dr. Farah Javed</h3>
-            <p>Endocrinologist</p>
-            <!-- <button class="view-prifile">View Profile</button> -->
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer id="footer">
-  <div class="footer-container">
-    
-    <!-- Brand -->
-    <div class="footer-brand">
-      <h2>MEDICARE</h2>
-      <p>Your trusted healthcare partner.</p>
-    </div>
-
-    <!-- Company -->
-    <div class="footer-section">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </div>
-
-    <!-- Services -->
-    <div class="footer-section">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#doctors">Find Doctors</a></li>
-        <li><a href="#">Hospitals</a></li>
-        <li><a href="#">Lab Tests</a></li>
-        <li><a href="#">Surgeries</a></li>
-        <li><a href="#">Online Consultation</a></li>
-      </ul>
-    </div>
-
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-        <h4>Newsletter</h4>
-        <p>Subscribe to get health tips & offers.</p>
-        <form id="newsletter-form">
-            <input type="email" id="newsletter-email" placeholder="Enter your email">
-            <button type="submit">Sbs..</button>
-            <p id="newsletter-message"></p>
-        </form>
-    </div>
-
-    <!-- Social -->
-    <div class="footer-section">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom -->
-  <div class="footer-bottom">
-    <p>© 2026 MEDICARE. All rights reserved.</p>
-  </div>
-</footer>
-<script src="script.js"></script>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
